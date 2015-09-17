@@ -1,0 +1,1 @@
+{"version":3,"sources":["index.sass"],"names":[],"mappings":"AAAA;EACC,wBAAwB;EACxB,uBAAuB,EAFlB","file":"index.css","sourcesContent":["body\n\tfont-family: sans-serif\n\tbackground-color: #eee\n"],"sourceRoot":"/source/"}
