@@ -1,5 +1,101 @@
-body {
-  font-family: sans-serif;
-  background-color: #eee; }
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Montserrat';
+  font-weight: 700;
+  text-transform: uppercase; }
+
+p {
+  font-family: "Lato"; }
+
+.header {
+  background-color: #2e2e2e;
+  height: 700px;
+  text-align: center;
+  display: table;
+  width: 100%;
+  color: #f0f0f1; }
+
+.header__content {
+  display: table-cell;
+  vertical-align: middle; }
+
+.header__logo--image {
+  display: block;
+  margin: 0 auto 25px; }
+
+.header__logo--text {
+  font-size: 14px;
+  display: inline-block;
+  position: relative;
+  letter-spacing: 4px;
+  margin-bottom: 50px; }
+  .header__logo--text::before, .header__logo--text::after {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background-color: #ec6759; }
+  .header__logo--text::before {
+    top: -10px; }
+  .header__logo--text::after {
+    bottom: -11px; }
+
+.welcome__greeting {
+  text-transform: uppercase;
+  font-weight: 900;
+  letter-spacing: 1px;
+  font-size: 14px; }
+
+.welcome__about {
+  font-size: 14px;
+  font-weight: 300;
+  max-width: 430px;
+  margin: 0 auto;
+  line-height: 1.5;
+  margin-bottom: 80px; }
+
+.contact-btn {
+  color: #f0f0f1;
+  border: 2px solid #ec6759;
+  border-radius: 6px;
+  display: inline-block;
+  padding: 17px 45px;
+  font-size: 11px;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-family: "Montserrat";
+  font-weight: 700;
+  position: relative;
+  overflow: hidden; }
+  .contact-btn .contact-btn__text {
+    position: relative;
+    z-index: 2; }
+  .contact-btn .contact-btn__bg {
+    background-color: #ec6759;
+    position: absolute;
+    top: 150%;
+    bottom: 150%;
+    left: 0;
+    right: 0;
+    -webkit-transform: rotate(25deg);
+    transform: rotate(25deg);
+    transition: all 0.3s ease;
+    z-index: 1; }
+  .contact-btn:hover .contact-btn__bg {
+    bottom: -30%;
+    left: -40%;
+    right: -40%;
+    top: -30%;
+    transition: all 0.3s ease; }
+
+.scrolldown-btn {
+  background: url("../img/scroll-arrow.svg");
+  display: block;
+  width: 45px;
+  height: 45px;
+  border: none;
+  margin: 0 auto;
+  margin-top: 90px; }
 
 /*# sourceMappingURL=index.css.map */
