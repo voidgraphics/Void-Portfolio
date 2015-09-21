@@ -1,0 +1,33 @@
+.wrap
+	width: 1200px
+	margin: 0 auto
+	transition: width .3s ease
+
+.row-3
+	display: inline-block
+	width: 30%
+
+@media (max-width: 1300px)
+	.wrap
+		width: 1000px
+		transition: width .3s ease
+
+@media (max-width: 1080px)
+	.wrap
+		width: 780px
+		transition: width .3s ease
+
+@media (max-width: 800px)
+	.wrap
+		width: 680px
+
+	div.row-3
+		display: block
+		width: 100%
+
+@media (max-width: 600px)
+	.wrap
+		width: 100%
+		padding: 0 20px
+		box-sizing: border-box
+		transition: width .3s ease

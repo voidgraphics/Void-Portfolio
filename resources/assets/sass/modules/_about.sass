@@ -1,0 +1,41 @@
+.about
+	text-align: center
+	display: table
+	width: 100%
+	padding-bottom: 60px
+
+.about__heading
+	text-align: center
+	font-size: 14px
+	margin: 50px 0
+
+.about__picture
+	transition: transform .3s ease
+
+.about__info, .about__picture
+	display: table-cell
+	vertical-align: middle
+
+.about__info__heading
+	font-size: 13px
+
+.about__info__text
+	font-size: 13px
+	line-height: 1.8
+	transition: width .3s ease
+
+@media (max-width: 1300px)
+	.about__picture
+		transform: scale( .8 )
+		transition: transform .3s ease
+
+@media (max-width: 800px)
+	.about__info__text
+		width: 70%
+		margin: 0 auto
+		transition: width .3s ease
+
+@media (max-width: 600px)
+	.about__info__text
+		width: 100%
+		transition: width .3s ease
