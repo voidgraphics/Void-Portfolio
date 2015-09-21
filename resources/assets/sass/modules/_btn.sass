@@ -1,0 +1,43 @@
+.btn
+	font-family: 'Montserrat'
+	font-weight: 600
+	font-size: 11px
+	color: #fff
+	background-color: $red
+	text-transform: uppercase
+	border-radius: 6px
+	margin: 60px auto
+	padding: 15px 25px
+	display: inline-block
+	letter-spacing: 1px
+	text-decoration: none
+	overflow: hidden
+	position: relative
+	border: 2px solid $red
+	transition: all .3s
+
+	&:hover
+		color: $darkGray
+
+		.btn__bg
+			left: -100%
+			top: -100%
+			bottom: -100%
+			right: -100%
+
+.btn__text
+	position: relative
+	z-index: 100
+
+.btn__bg
+	position: absolute
+	z-index: 50
+	top: 150%
+	left: 0
+	right: 0
+	bottom:150%
+	-webkit-transform: rotate(-25deg)
+	-moz-transform: rotate(-25deg)
+	transform: rotate(-25deg)
+	background-color: #fff
+	transition: all .4s ease
