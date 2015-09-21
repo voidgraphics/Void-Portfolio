@@ -14,6 +14,9 @@
 </head>
 <body>
 	@yield( "content" )
+	<footer class="page-footer">
+		<img src="{{ asset( '/img/logo.svg' ) }}" alt="" />
+	</footer>
 	@yield( "scripts" )
 </body>
 </html>
