@@ -6,6 +6,10 @@ h1, h2, h3, h4, h5, h6 {
 p {
   font-family: "Lato"; }
 
+hr {
+  border: 1px solid #ec6759;
+  width: 100px; }
+
 .wrap {
   width: 1200px;
   margin: 0 auto;
@@ -13,6 +17,7 @@ p {
 
 .row-3 {
   display: inline-block;
+  vertical-align: middle;
   width: 30%; }
 
 @media (max-width: 1300px) {
@@ -310,5 +315,115 @@ p {
   .blog__post__body {
     width: 100%;
     text-align: center; } }
+
+.contact {
+  background-color: #465256;
+  color: #fff;
+  text-align: center; }
+  .contact .section__heading {
+    color: #fff; }
+
+.contact__info,
+.contact__social {
+  margin-top: -150px;
+  vertical-align: middle; }
+
+.contact__info__heading,
+.contact__social__heading {
+  font-size: 13px;
+  text-align: center; }
+
+.contact__info__body {
+  font-size: 13px;
+  line-height: 1.8;
+  width: 80%;
+  margin: 0 auto; }
+  .contact__info__body a {
+    color: inherit;
+    font-weight: 400; }
+
+.contact__form {
+  margin: 0 55px;
+  transition: margin 0.3s ease; }
+
+label {
+  display: block;
+  text-align: left;
+  text-transform: uppercase;
+  font-family: "Montserrat";
+  font-size: 12px;
+  margin-bottom: 5px; }
+
+.contact__form input,
+.contact__form textarea {
+  display: block;
+  background-color: #394549;
+  border: none;
+  width: 100%;
+  padding: 10px 10px 11px;
+  font-size: 14px;
+  border-right: 5px solid #394549;
+  border-left: 5px solid #394549;
+  border-radius: 6px;
+  transition: border-color 0.3s ease;
+  box-sizing: border-box;
+  margin-bottom: 20px;
+  font-family: "Lato"; }
+  .contact__form input:focus,
+  .contact__form textarea:focus {
+    outline: none;
+    border-color: #2e383c;
+    transition: border-color 0.3s ease; }
+
+.contact__form textarea {
+  resize: none; }
+
+.contact__form .btn {
+  margin-top: 20px; }
+
+.contact__form .btn__bg {
+  background: #465256; }
+
+.contact__form .btn__text {
+  color: #fff; }
+
+.contact__form .btn:hover .btn__text {
+  color: #fff; }
+
+.contact__social a {
+  text-decoration: none;
+  display: inline-block;
+  margin: 10px 5px; }
+
+.contact__social a path {
+  fill: #2e383c;
+  transition: fill 0.3s ease; }
+
+.contact__social a:hover path {
+  fill: #fff;
+  transition: fill 0.3s ease; }
+
+@media (max-width: 1300px) {
+  .contact__form {
+    margin: 0 30px;
+    transition: margin 0.3s ease; } }
+
+@media (max-width: 1080px) {
+  .contact {
+    padding-bottom: 50px; }
+  .contact__info {
+    display: none; }
+  .contact__social {
+    margin-top: 0; }
+  .contact__info__body {
+    width: 70%;
+    font-size: 14px; }
+  .contact__form {
+    margin: 50px 0; }
+  .contact__form input,
+  .contact__form textarea {
+    font-size: 16px; }
+  .contact__form .btn {
+    margin-bottom: 10px; } }
 
 /*# sourceMappingURL=index.css.map */

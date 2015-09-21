@@ -1,0 +1,118 @@
+.contact
+	background-color: $lightBlue
+	color: #fff
+	text-align: center
+
+	.section__heading
+		color: #fff
+
+.contact__info,
+.contact__social
+	margin-top: -150px
+	vertical-align: middle
+
+.contact__info__heading,
+.contact__social__heading
+	font-size: 13px
+	text-align: center
+
+.contact__info__body
+	font-size: 13px
+	line-height: 1.8
+	width: 80%
+	margin: 0 auto
+
+	a
+		color: inherit
+		font-weight: 400
+
+.contact__form
+	margin: 0 55px
+	transition: margin .3s ease
+
+label
+	display: block
+	text-align: left
+	text-transform: uppercase
+	font-family: "Montserrat"
+	font-size: 12px
+	margin-bottom: 5px
+
+.contact__form input,
+.contact__form textarea
+	display: block
+	background-color: $darkBlue
+	border: none
+	width: 100%
+	padding: 10px 10px 11px
+	font-size: 14px
+	border-right: 5px solid $darkBlue
+	border-left: 5px solid $darkBlue
+	border-radius: 6px
+	transition: border-color .3s ease
+	box-sizing: border-box
+	margin-bottom: 20px
+	font-family: "Lato"
+
+	&:focus
+		outline: none
+		border-color: $darkerBlue
+		transition: border-color .3s ease
+
+.contact__form textarea
+	resize: none
+
+.contact__form .btn
+	margin-top: 20px
+
+.contact__form .btn__bg
+	background: $lightBlue
+
+.contact__form .btn__text
+	color: #fff
+
+.contact__form .btn:hover .btn__text
+	color: #fff
+
+
+.contact__social a
+	text-decoration: none
+	display: inline-block
+	margin: 10px 5px
+
+.contact__social a path
+	fill: $darkerBlue
+	transition: fill .3s ease
+
+.contact__social a:hover path
+	fill: #fff
+	transition: fill .3s ease
+
+@media (max-width: 1300px)
+	.contact__form
+		margin: 0 30px
+		transition: margin .3s ease
+
+@media (max-width: 1080px)
+	.contact
+		padding-bottom: 50px
+
+	.contact__info
+		display: none
+
+	.contact__social
+		margin-top: 0
+
+	.contact__info__body
+		width: 70%
+		font-size: 14px
+
+	.contact__form
+		margin: 50px 0
+
+	.contact__form input,
+	.contact__form textarea
+		font-size: 16px
+
+	.contact__form .btn
+		margin-bottom: 10px
