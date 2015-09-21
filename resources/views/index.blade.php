@@ -23,9 +23,9 @@ Home - Void Graphics
 		<button class="scrolldown-btn"></button>
 	</div>
 </header>
-<div class="about">
+<div class="about section">
 	<div class="wrap">
-		<h2 class="about__heading">A few words about me</h2>
+		<h2 class="section__heading about__heading">A few words about me</h2>
 		<div class="row-3 about__info">
 			<h3 class="about__info__heading">Adrien Leloup, 21, Belgian, student.</h3>
 			<p class="about__info__text">
@@ -46,5 +46,74 @@ Home - Void Graphics
 			</p>
 		</div>
 	</div>
+</div>
+<div class="recent-works section">
+	<h2 class="section__heading">Some of my latest work</h2>
+</div>
+<div class="blog section">
+	<h2 class="section__heading">Sometimes I also write blog posts</h2>
+	<div class="wrap">
+		<article class="row-3 blog__post">
+			<header>
+				<h3 class="blog__post__heading">
+					<a href="#" class="blog__post__heading__link">Daft Punk's Electroma</a>
+				</h3>
+				<hr class="blog__post__header-separator">
+				<p class="blog__post__date">
+					Wed 9 June 2015
+				</p>
+			</header>
+			<main class="blog__post__body">
+				Who's brave enough to fly into something we all keep calling a <em>death sphere</em>? I meant 'physically'. Look, perhaps you could let me work for a little food? I could clean the floors or paint a fence, or service you sexually? Fry! Quit doing the right thing, you jerk! With gusto. And yet you haven't said what I told you&nbsp;...
+			</main>
+			<footer class="blog__post__footer">
+				<a href="#" class="blog__post__footer__link">Read this blog entry</a>
+			</footer>
+		</article>
+		<article class="row-3 blog__post">
+			<header>
+				<h3 class="blog__post__heading">
+					<a href="#" class="blog__post__heading__link">Daft Punk's Electroma</a>
+				</h3>
+				<hr class="blog__post__header-separator">
+				<p class="blog__post__date">
+					Wed 9 June 2015
+				</p>
+			</header>
+			<main class="blog__post__body">
+				Who's brave enough to fly into something we all keep calling a <em>death sphere</em>? I meant 'physically'. Look, perhaps you could let me work for a little food? I could clean the floors or paint a fence, or service you sexually? Fry! Quit doing the right thing, you jerk! With gusto. And yet you haven't said what I told you&nbsp;...
+			</main>
+			<footer class="blog__post__footer">
+				<a href="#" class="blog__post__footer__link">Read this blog entry</a>
+			</footer>
+		</article>
+		<article class="row-3 blog__post">
+			<header>
+				<h3 class="blog__post__heading">
+					<a href="#" class="blog__post__heading__link">Daft Punk's Electroma</a>
+				</h3>
+				<hr class="blog__post__header-separator">
+				<p class="blog__post__date">
+					Wed 9 June 2015
+				</p>
+			</header>
+			<main class="blog__post__body">
+				Who's brave enough to fly into something we all keep calling a <em>death sphere</em>? I meant 'physically'. Look, perhaps you could let me work for a little food? I could clean the floors or paint a fence, or service you sexually? Fry! Quit doing the right thing, you jerk! With gusto. And yet you haven't said what I told you&nbsp;...
+			</main>
+			<footer class="blog__post__footer">
+				<a href="#" class="blog__post__footer__link">Read this blog entry</a>
+			</footer>
+		</article>
+		<a href="#" class="btn">
+			<span class="btn__text">View more blog posts</span>
+			<span class="btn__bg"></span>
+		</a>
+	</div>
+</div>
+<div class="contact section">
+
+</div>
+<div class="intothevoid section">
+
 </div>
 @stop
