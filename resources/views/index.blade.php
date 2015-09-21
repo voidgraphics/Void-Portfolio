@@ -34,7 +34,7 @@ Home - Void Graphics
 			</p>
 		</div>
 		<div class="row-3 about__picture">
-			<img src="{{ asset( '/img/face.png' ) }}" alt="" />
+			<img src="{{ asset( '/img/face.png' ) }}" alt="Picture of me"  width="291" height="424"/>
 		</div>
 		<div class="row-3 about__info">
 			<h3 class="about__info__heading">My skills</h3>
