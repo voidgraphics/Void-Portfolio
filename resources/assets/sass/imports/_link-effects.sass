@@ -1,0 +1,22 @@
+=middle-line( $color )
+	position: relative
+
+	&::after
+		content: " "
+		display: block
+		position: absolute
+		bottom: -2px
+		left: 52%
+		right: 52%
+		height: 2px
+		background-color: $color
+		transition: all .2s ease
+
+	&:hover
+		color: $darkGray
+		transition: all .2s
+
+	&:hover::after
+		left: 0
+		right: 0
+		transition: all .2s ease
