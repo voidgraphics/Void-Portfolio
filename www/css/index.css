@@ -6,6 +6,39 @@ h1, h2, h3, h4, h5, h6 {
 p {
   font-family: "Lato"; }
 
+.wrap {
+  width: 1200px;
+  margin: 0 auto;
+  transition: width 0.3s ease; }
+
+.row-3 {
+  display: inline-block;
+  width: 30%; }
+
+@media (max-width: 1300px) {
+  .wrap {
+    width: 1000px;
+    transition: width 0.3s ease; } }
+
+@media (max-width: 1080px) {
+  .wrap {
+    width: 780px;
+    transition: width 0.3s ease; } }
+
+@media (max-width: 800px) {
+  .wrap {
+    width: 680px; }
+  div.row-3 {
+    display: block;
+    width: 100%; } }
+
+@media (max-width: 600px) {
+  .wrap {
+    width: 100%;
+    padding: 0 20px;
+    box-sizing: border-box;
+    transition: width 0.3s ease; } }
+
 .header {
   background-color: #2e2e2e;
   height: 700px;
@@ -53,7 +86,7 @@ p {
   max-width: 430px;
   margin: 0 auto;
   line-height: 1.5;
-  margin-bottom: 80px; }
+  margin-bottom: 60px; }
 
 .contact-btn {
   color: #f0f0f1;
@@ -96,6 +129,51 @@ p {
   height: 45px;
   border: none;
   margin: 0 auto;
-  margin-top: 90px; }
+  margin-top: 80px; }
+
+.about {
+  text-align: center;
+  display: table;
+  width: 100%;
+  padding-bottom: 60px; }
+
+.about__heading {
+  text-align: center;
+  font-size: 14px;
+  margin: 50px 0; }
+
+.about__picture {
+  transition: -webkit-transform 0.3s ease;
+  transition: transform 0.3s ease; }
+
+.about__info, .about__picture {
+  display: table-cell;
+  vertical-align: middle; }
+
+.about__info__heading {
+  font-size: 13px; }
+
+.about__info__text {
+  font-size: 13px;
+  line-height: 1.8;
+  transition: width 0.3s ease; }
+
+@media (max-width: 1300px) {
+  .about__picture {
+    -webkit-transform: scale(0.8);
+    transform: scale(0.8);
+    transition: -webkit-transform 0.3s ease;
+    transition: transform 0.3s ease; } }
+
+@media (max-width: 800px) {
+  .about__info__text {
+    width: 70%;
+    margin: 0 auto;
+    transition: width 0.3s ease; } }
+
+@media (max-width: 600px) {
+  .about__info__text {
+    width: 100%;
+    transition: width 0.3s ease; } }
 
 /*# sourceMappingURL=index.css.map */
