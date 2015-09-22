@@ -15,10 +15,10 @@ Route::get('/', [ 'as' => 'home', 'uses' => 'PagesController@index' ]);
 Route::group(['middleware' => 'auth'], function () {
 	Route::get('/admin', [ 'as' => 'admin', 'uses' => 'AdminController@index' ]);
 	Route::resource('works', 'WorksController', ['except' => ['index', 'show']]);
-	Route::resource('blog', 'BlogController', ['except' => ['index', 'show']]);
+	Route::resource('posts', 'PostsController', ['except' => ['index', 'show']]);
 });
 Route::resource('works', 'WorksController', ['only' => ['index', 'show']]);
-Route::resource('blog', 'BlogController', ['only' => ['index', 'show']]);
+Route::resource('posts', 'PostsController', ['only' => ['index', 'show']]);
 
 Route::get('auth/login', 'Auth\AuthController@getLogin');
 Route::post('auth/login', 'Auth\AuthController@postLogin');
