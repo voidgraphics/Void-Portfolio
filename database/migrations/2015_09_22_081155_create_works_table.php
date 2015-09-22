@@ -14,9 +14,11 @@ class CreateWorksTable extends Migration
     {
         Schema::create('works', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('slug');
             $table->string('title');
             $table->string('category');
             $table->longText('desc');
+            $table->string('thumbnail_path');
             $table->string('img_path');
             $table->timestamps();
         });

@@ -49,6 +49,28 @@ Home - Void Graphics
 </div>
 <div class="recent-works section">
 	<h2 class="section__heading">Some of my latest work</h2>
+	<div class="wrap">
+		@foreach($works as $work)
+			<div class="row-3 recent-works__work">
+				<div class="recent-works__work__thumb-container">
+					<a href="/works/{{ $work->slug }}" class="recent-works__work__link">
+						<img src="{{ asset( $work->thumbnail_path ) }}" class="recent-works__work__thumbnail" alt="" width="100%"/>
+					</a>
+				</div>
+				<h3 class="recent-works__work__heading">
+					<a href="/works/{{ $work->slug }}" class="recent-works__work__link">{{ $work->title }}</a>
+				</h3>
+				<hr>
+				<p class="recent-works__work__date">
+					{{ \Carbon\Carbon::instance($work->created_at)->toFormattedDateString() }}
+				</p>
+			</div>
+		@endforeach
+		<a href="#" class="btn">
+			<span class="btn__text">View more design</span>
+			<span class="btn__bg"></span>
+		</a>
+	</div>
 </div>
 <div class="blog section">
 	<h2 class="section__heading">Sometimes I also write blog posts</h2>
