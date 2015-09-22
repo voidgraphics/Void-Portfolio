@@ -55,7 +55,7 @@ class WorksController extends Controller
         $data['thumbnail_path'] = '/img/uploads/thumb-' . $name;
         $data['img_path'] = '/img/uploads/' . $name;
 
-        $work = Work::create($data);
+        Work::create($data);
 
     }
 
