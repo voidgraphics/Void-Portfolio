@@ -13,6 +13,10 @@
 	<form class="" action="/works" method="post" enctype="multipart/form-data">
 		{!! csrf_field() !!}
 		<div class="">
+			<label for="slug">Slug</label>
+			<input type="text" name="slug" value="">
+		</div>
+		<div class="">
 			<label for="title">Title</label>
 			<input type="text" name="title" value="">
 		</div>
