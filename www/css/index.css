@@ -189,7 +189,8 @@ hr {
   background-color: #465256;
   text-align: center; }
   .recent-works .section__heading {
-    color: #f0f0f1; }
+    color: #f0f0f1;
+    font-weight: 400; }
 
 .recent-works__work:nth-child(2) {
   margin: 0 55px;
@@ -376,7 +377,8 @@ hr {
   color: #fff;
   text-align: center; }
   .contact .section__heading {
-    color: #fff; }
+    color: #fff;
+    font-weight: 400; }
 
 .contact__info,
 .contact__social {
@@ -386,7 +388,8 @@ hr {
 .contact__info__heading,
 .contact__social__heading {
   font-size: 13px;
-  text-align: center; }
+  text-align: center;
+  font-weight: 400; }
 
 .contact__info__body {
   font-size: 13px;
