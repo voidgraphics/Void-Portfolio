@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Auth;
 use App\User;
 use Validator;
 use App\Http\Controllers\Controller;
+use Request;
 use Illuminate\Foundation\Auth\ThrottlesLogins;
 use Illuminate\Foundation\Auth\AuthenticatesAndRegistersUsers;
 
@@ -44,7 +45,7 @@ class AuthController extends Controller
         return Validator::make($data, [
             'username' => 'required|max:255',
             'email' => 'required|email|max:255|unique:users',
-            'password' => 'required|confirmed|min:6',
+            'password' => 'required|min:6',
         ]);
     }
 
@@ -56,12 +57,21 @@ class AuthController extends Controller
      */
     protected function create(array $data)
     {
-        var_dump($data);
-        die();
         return User::create([
             'username' => $data['username'],
             'email' => $data['email'],
             'password' => bcrypt($data['password']),
         ]);
+    }
+
+    protected function postRegister()
+    {
+        $data = Request::all();
+        $validator = $this->validator($data);
+        if($validator->fails()){
+            dd($validator->messages());
+        } else {
+            $this->create($data);
+        }
     }
 }
