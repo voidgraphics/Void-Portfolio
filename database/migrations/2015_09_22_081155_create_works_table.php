@@ -16,6 +16,8 @@ class CreateWorksTable extends Migration
             $table->increments('id');
             $table->string('title');
             $table->string('category');
+            $table->longText('desc');
+            $table->string('img_path');
             $table->timestamps();
         });
     }
