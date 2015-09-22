@@ -35,9 +35,22 @@ class WorksController extends Controller
      * @param  Request  $request
      * @return Response
      */
-    public function store(Request $request)
+    public function store(\Illuminate\Http\Request $request)
     {
         $data = Request::all();
+        $this->validate($request, [
+            'title' => 'required',
+            'category' => 'required',
+            'desc' => 'required',
+            'img' => 'required'
+        ]);
+        $img = $request->file('img');
+        $now = \Carbon\Carbon::now();
+        $name = $now->minute . $now->day . $now->month . $now->year . "-" . $img->getClientOriginalName();
+        $path = public_path('img/uploads');
+        $img->move($path, $name);
+        $data['img_path'] = '/img/uploads/' . $name;
+
         $work = Work::create($data);
 
     }
