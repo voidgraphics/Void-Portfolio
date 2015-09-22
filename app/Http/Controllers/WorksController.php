@@ -26,7 +26,7 @@ class WorksController extends Controller
      */
     public function create()
     {
-        return view('admin/addWork');
+        return view('works.create');
     }
 
     /**

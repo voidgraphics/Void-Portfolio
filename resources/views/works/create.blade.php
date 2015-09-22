@@ -1,6 +1,7 @@
 @extends('layout')
 
 @section('content')
+	<h2>Create new project</h2>
 	@if (count($errors) > 0)
 	<div class="alert alert-danger">
 		<ul>
