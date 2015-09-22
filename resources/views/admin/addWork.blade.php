@@ -1,7 +1,16 @@
 @extends('layout')
 
 @section('content')
-	<form class="" action="/works" method="post">
+	@if (count($errors) > 0)
+	<div class="alert alert-danger">
+		<ul>
+			@foreach ($errors->all() as $error)
+				<li>{{ $error }}</li>
+			@endforeach
+		</ul>
+	</div>
+	@endif
+	<form class="" action="/works" method="post" enctype="multipart/form-data">
 		{!! csrf_field() !!}
 		<div class="">
 			<label for="title">Title</label>
