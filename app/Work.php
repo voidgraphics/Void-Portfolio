@@ -8,9 +8,11 @@ class Work extends Model
 {
     protected $fillable = [
         'title',
+        'slug',
         'body',
         'category',
         'desc',
+        'thumbnail_path',
         'img_path'
     ];
 }

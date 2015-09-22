@@ -25,6 +25,10 @@
 			<textarea name="desc" rows="8" cols="40"></textarea>
 		</div>
 		<div class="">
+			<label for="thumb">Thumbnail</label>
+			<input type="file" name="thumb" value="">
+		</div>
+		<div class="">
 			<label for="img">Image</label>
 			<input type="file" name="img" value="">
 		</div>

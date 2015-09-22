@@ -39,16 +39,20 @@ class WorksController extends Controller
     {
         $data = Request::all();
         $this->validate($request, [
+            'slug' => 'required',
             'title' => 'required',
             'category' => 'required',
             'desc' => 'required',
             'img' => 'required'
         ]);
+        $thumbnail = $request->file('thumb');
         $img = $request->file('img');
         $now = \Carbon\Carbon::now();
         $name = $now->minute . $now->day . $now->month . $now->year . "-" . $img->getClientOriginalName();
         $path = public_path('img/uploads');
         $img->move($path, $name);
+        $thumbnail->move($path, 'thumb-' . $name);
+        $data['thumbnail_path'] = '/img/uploads/thumb-' . $name;
         $data['img_path'] = '/img/uploads/' . $name;
 
         $work = Work::create($data);
@@ -61,9 +65,10 @@ class WorksController extends Controller
      * @param  int  $id
      * @return Response
      */
-    public function show($id)
+    public function show($slug)
     {
-        //
+        $work = Work::where('slug', $slug)->firstOrFail();
+        return view('works.show')->with('work', $work);
     }
 
     /**
