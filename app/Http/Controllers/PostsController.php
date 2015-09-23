@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Request;
 use Redirect;
+use App\Work;
 use App\Post;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
@@ -65,7 +66,9 @@ class PostsController extends Controller
     public function show($slug)
     {
         $post = Post::where('slug', $slug)->firstOrFail();
-        return view('posts.show')->with('post', $post);
+        $moreWorks = Work::orderByRaw('RAND()')->take(3)->get();
+        $morePosts = Post::where('slug', '!=', $post->slug)->orderByRaw('RAND()')->take(3)->get();
+        return view('posts.show', compact("post", "moreWorks", "morePosts"));
     }
 
     /**
