@@ -9,10 +9,11 @@ Home - Void Graphics
 @stop
 
 @section( "content" )
+<h1 class="page-title--hidden">Homepage</h1>
 <header class="header">
 	<div class="header__content">
 		<img src="{{ asset( '/img/logo.svg' ) }}" alt="Void Graphics Logo" class="header__logo--image">
-		<h1 class="header__logo--text">Void graphics</h1>
+		<div class="header__logo--text">Void graphics</div>
 		<p class="welcome">
 			<span class="welcome__greeting">Hello!</span>
 			<p class="welcome__about">
@@ -23,7 +24,7 @@ Home - Void Graphics
 		<button class="scrolldown-btn"></button>
 	</div>
 </header>
-<div class="about section">
+<section class="about section">
 	<div class="wrap">
 		<h2 class="section__heading about__heading">A few words about me</h2>
 		<div class="row-3 about__info">
@@ -46,12 +47,12 @@ Home - Void Graphics
 			</p>
 		</div>
 	</div>
-</div>
-<div class="recent-works section">
+</section>
+<section class="recent-works section">
 	<h2 class="section__heading">Some of my latest work</h2>
 	<div class="wrap">
 		@foreach($works as $work)
-			<div class="row-3 recent-works__work">
+			<article class="row-3 recent-works__work">
 				<div class="recent-works__work__thumb-container">
 					<a href="/works/{{ $work->slug }}" class="recent-works__work__link">
 						<img src="{{ asset( $work->thumbnail_path ) }}" class="recent-works__work__thumbnail" alt="" width="100%"/>
@@ -64,33 +65,33 @@ Home - Void Graphics
 				<p class="recent-works__work__date">
 					{{ \Carbon\Carbon::instance($work->created_at)->toFormattedDateString() }}
 				</p>
-			</div>
+			</article>
 		@endforeach
 		<a href="#" class="btn">
 			<span class="btn__text">View more design</span>
 			<span class="btn__bg"></span>
 		</a>
 	</div>
-</div>
-<div class="blog section">
+</section>
+<section class="blog section">
 	<h2 class="section__heading">Sometimes I also write blog posts</h2>
 	<div class="wrap">
 		@foreach($posts as $post)
 		<article class="row-3 blog__post-preview">
 			<header>
-				<h3 class="blog__post-preview__heading">
-					<a href="/posts/{{ $post->slug }}" class="blog__post-preview__heading__link">{{ $post->title }}</a>
+				<h3 class="post__heading">
+					<a href="/posts/{{ $post->slug }}" class="post__heading__link">{{ $post->title }}</a>
 				</h3>
-				<hr class="blog__post-preview__header-separator">
-				<p class="blog__post-preview__date">
+				<hr>
+				<p class="post__date">
 					{{ \Carbon\Carbon::instance($post->created_at)->toFormattedDateString() }}
 				</p>
 			</header>
-			<main class="blog__post-preview__body">
+			<main class="post__body">
 				{{ str_limit($post->body, 300, '...') }}
 			</main>
-			<footer class="blog__post-preview__footer">
-				<a href="/posts/{{ $post->slug }}" class="blog__post-preview__footer__link">Read this blog entry</a>
+			<footer class="post__footer">
+				<a href="/posts/{{ $post->slug }}" class="post__footer__link">Read this blog entry</a>
 			</footer>
 		</article>
 		@endforeach
@@ -100,8 +101,8 @@ Home - Void Graphics
 			<span class="btn__bg"></span>
 		</a>
 	</div>
-</div>
-<div class="contact section">
+</section>
+<section class="contact section">
 	<h2 class="section__heading">Here's an easy way to contact me</h2>
 	<div class="wrap">
 		<div class="row-3 contact__info">
@@ -148,10 +149,10 @@ Home - Void Graphics
 			</a>
 		</div>
 	</div>
-</div>
-<div class="intothevoid section">
+</section>
+<section class="intothevoid section">
 	<h2 class="section__heading">Want to see more?</h2>
 	<hr>
 	<a href="http://www.intothevoid.space" class="intothevoid__link">www.intothevoid.space</a>
-</div>
+</section>
 @stop

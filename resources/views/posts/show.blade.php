@@ -31,19 +31,19 @@ Blog: {{ $post->title }} - Void Graphics
 						<li>
 							<article class="blog__post-preview">
 								<header>
-									<h3 class="blog__post-preview__heading">
-										<a href="/posts/{{ $morePost->slug }}" class="blog__post-preview__heading__link">{{ $morePost->title }}</a>
+									<h3 class="post__heading">
+										<a href="/posts/{{ $morePost->slug }}" class="post__heading__link">{{ $morePost->title }}</a>
 									</h3>
-									<hr class="blog__post-preview__header-separator">
-									<p class="blog__post-preview__date">
+									<hr>
+									<p class="post__date">
 										{{ \Carbon\Carbon::instance($morePost->created_at)->toFormattedDateString() }}
 									</p>
 								</header>
-								<main class="blog__post-preview__body">
+								<main class="post__body">
 									{{ str_limit($morePost->body, 100, '...') }}
 								</main>
-								<footer class="blog__post-preview__footer">
-									<a href="/posts/{{ $morePost->slug }}" class="blog__post-preview__footer__link">Read this blog entry</a>
+								<footer class="post__footer">
+									<a href="/posts/{{ $morePost->slug }}" class="post__footer__link">Read this blog entry</a>
 								</footer>
 							</article>
 						</li>
