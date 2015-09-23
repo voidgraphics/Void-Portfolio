@@ -44,7 +44,12 @@ class PostsController extends Controller
             'slug' => 'required',
             'body' => 'required'
         ]);
-
+        $header_img = $request->file('header-img');
+        $now = \Carbon\Carbon::now();
+        $name = $now->minute . $now->day . $now->month . $now->year . "-" . $header_img->getClientOriginalName();
+        $data['header_path'] = '/img/uploads/posts/header-' . $name;
+        $path = public_path('img/uploads/posts');
+        $header_img->move($path, 'header-' . $name);
         Post::create($data);
 
         return Redirect::to('/');
