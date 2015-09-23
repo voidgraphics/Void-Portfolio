@@ -9,7 +9,7 @@ Home - Void Graphics
 @stop
 
 @section( "content" )
-<h1 class="page-title--hidden">Homepage</h1>
+<h1 class="title--hidden">Homepage</h1>
 <header class="header">
 	<div class="header__content">
 		<img src="{{ asset( '/img/logo.svg' ) }}" alt="Void Graphics Logo" class="header__logo--image">
