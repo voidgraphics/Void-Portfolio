@@ -1,0 +1,203 @@
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Montserrat';
+  font-weight: 700;
+  text-transform: uppercase; }
+
+p {
+  font-family: "Lato"; }
+
+hr {
+  border: 1px solid #ec6759;
+  width: 100px; }
+
+ul {
+  list-style-type: none; }
+
+.wrap {
+  width: 1200px;
+  margin: 0 auto;
+  transition: width 0.3s ease; }
+
+.row-3 {
+  display: inline-block;
+  vertical-align: middle;
+  width: 30%; }
+
+@media (max-width: 1300px) {
+  .wrap {
+    width: 1000px;
+    transition: width 0.3s ease; } }
+
+@media (max-width: 1080px) {
+  .wrap {
+    width: 780px;
+    transition: width 0.3s ease; }
+  .row-3 {
+    display: block;
+    width: 100%; } }
+
+@media (max-width: 800px) {
+  .wrap {
+    width: 680px; } }
+
+@media (max-width: 700px) {
+  .wrap {
+    width: 100%;
+    padding: 0 20px;
+    box-sizing: border-box;
+    transition: width 0.3s ease; } }
+
+.section {
+  padding-top: 50px; }
+
+.section__heading {
+  text-align: center;
+  font-size: 14px;
+  margin-bottom: 50px; }
+
+.hero {
+  height: 400px;
+  width: 100%;
+  position: relative; }
+
+.hero__bg {
+  position: fixed;
+  top: 0;
+  z-index: -2;
+  width: 100%; }
+
+.hero__content {
+  display: inline-block;
+  background-color: #fff;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+  position: absolute;
+  padding: 30px 120px;
+  border-radius: 6px; }
+
+.hero__title {
+  position: relative;
+  z-index: 0;
+  text-align: center; }
+
+.hero__date {
+  text-align: center; }
+
+.blog__post-preview__heading {
+  font-size: 13px;
+  text-align: center; }
+
+.blog__post-preview__heading__link {
+  color: inherit;
+  text-decoration: none; }
+
+.blog__post-preview__date {
+  font-size: 11px;
+  text-transform: uppercase;
+  font-family: "Montserrat";
+  text-align: center; }
+
+.blog__post-preview__header-separator {
+  border: 1px solid #ec6759;
+  width: 100px; }
+
+.blog__post-preview__body {
+  font-size: 13px;
+  font-family: "Lato";
+  line-height: 1.8;
+  margin-top: 25px;
+  text-align: left; }
+  .blog__post-preview__body em {
+    font-style: italic;
+    font-weight: 900; }
+
+.blog__post-preview__footer {
+  padding-top: 15px;
+  text-align: center; }
+
+.blog__post-preview__footer__link {
+  font-size: 11px;
+  font-family: "Montserrat";
+  font-weight: 900;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #000;
+  position: relative; }
+  .blog__post-preview__footer__link::after {
+    content: " ";
+    display: block;
+    position: absolute;
+    bottom: -2px;
+    left: 52%;
+    right: 52%;
+    height: 2px;
+    background-color: #ec6759;
+    transition: all 0.2s ease; }
+  .blog__post-preview__footer__link:hover {
+    color: #2e2e2e;
+    transition: all 0.2s; }
+  .blog__post-preview__footer__link:hover::after {
+    left: 0;
+    right: 0;
+    transition: all 0.2s ease; }
+
+@media (max-width: 1300px) {
+  .blog__post-preview:nth-child(2) {
+    margin: 0 30px;
+    transition: margin 0.3s ease; } }
+
+@media (max-width: 1080px) {
+  .blog__post-preview {
+    display: none; }
+  .blog__post-preview:first-child {
+    display: block; }
+  .blog__post-preview__body {
+    width: 70%;
+    margin: 25px auto 0; } }
+
+@media (max-width: 600px) {
+  .blog__post-preview__body {
+    width: 100%;
+    text-align: center; } }
+
+.post {
+  background-color: #fff;
+  padding: 30px 0; }
+
+.post__content,
+.viewmore {
+  display: inline-block;
+  box-sizing: border-box; }
+
+.post__content {
+  width: 60%;
+  margin-right: 10%; }
+  .post__content p {
+    line-height: 1.7; }
+
+.viewmore {
+  width: 30%;
+  padding: 0;
+  vertical-align: top; }
+
+.viewmore__posts {
+  padding-left: 0; }
+
+.viewmore__heading {
+  text-align: center;
+  margin-bottom: 35px; }
+
+.page-footer {
+  height: 200px;
+  background-color: #2e2e2e;
+  text-align: center;
+  padding-top: 65px;
+  box-sizing: border-box; }
+  .page-footer img {
+    -webkit-transform: scale(0.7);
+    transform: scale(0.7); }
+
+/*# sourceMappingURL=blog-post.css.map */

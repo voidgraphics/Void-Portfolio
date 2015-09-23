@@ -10,6 +10,9 @@ hr {
   border: 1px solid #ec6759;
   width: 100px; }
 
+ul {
+  list-style-type: none; }
+
 .wrap {
   width: 1200px;
   margin: 0 auto;
@@ -291,43 +294,43 @@ hr {
 .blog {
   text-align: center; }
 
-.blog__post:nth-child(2) {
+.blog__post-preview:nth-child(2) {
   margin: 0 55px;
   transition: margin 0.3s ease; }
 
-.blog__post__heading {
+.blog__post-preview__heading {
   font-size: 13px;
   text-align: center; }
 
-.blog__post__heading__link {
+.blog__post-preview__heading__link {
   color: inherit;
   text-decoration: none; }
 
-.blog__post__date {
+.blog__post-preview__date {
   font-size: 11px;
   text-transform: uppercase;
   font-family: "Montserrat";
   text-align: center; }
 
-.blog__post__header-separator {
+.blog__post-preview__header-separator {
   border: 1px solid #ec6759;
   width: 100px; }
 
-.blog__post__body {
+.blog__post-preview__body {
   font-size: 13px;
   font-family: "Lato";
   line-height: 1.8;
   margin-top: 25px;
   text-align: left; }
-  .blog__post__body em {
+  .blog__post-preview__body em {
     font-style: italic;
     font-weight: 900; }
 
-.blog__post__footer {
+.blog__post-preview__footer {
   padding-top: 15px;
   text-align: center; }
 
-.blog__post__footer__link {
+.blog__post-preview__footer__link {
   font-size: 11px;
   font-family: "Montserrat";
   font-weight: 900;
@@ -335,7 +338,7 @@ hr {
   text-decoration: none;
   color: #000;
   position: relative; }
-  .blog__post__footer__link::after {
+  .blog__post-preview__footer__link::after {
     content: " ";
     display: block;
     position: absolute;
@@ -345,30 +348,30 @@ hr {
     height: 2px;
     background-color: #ec6759;
     transition: all 0.2s ease; }
-  .blog__post__footer__link:hover {
+  .blog__post-preview__footer__link:hover {
     color: #2e2e2e;
     transition: all 0.2s; }
-  .blog__post__footer__link:hover::after {
+  .blog__post-preview__footer__link:hover::after {
     left: 0;
     right: 0;
     transition: all 0.2s ease; }
 
 @media (max-width: 1300px) {
-  .blog__post:nth-child(2) {
+  .blog__post-preview:nth-child(2) {
     margin: 0 30px;
     transition: margin 0.3s ease; } }
 
 @media (max-width: 1080px) {
-  .blog__post {
+  .blog__post-preview {
     display: none; }
-  .blog__post:first-child {
+  .blog__post-preview:first-child {
     display: block; }
-  .blog__post__body {
+  .blog__post-preview__body {
     width: 70%;
     margin: 25px auto 0; } }
 
 @media (max-width: 600px) {
-  .blog__post__body {
+  .blog__post-preview__body {
     width: 100%;
     text-align: center; } }
 

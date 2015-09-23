@@ -76,21 +76,21 @@ Home - Void Graphics
 	<h2 class="section__heading">Sometimes I also write blog posts</h2>
 	<div class="wrap">
 		@foreach($posts as $post)
-		<article class="row-3 blog__post">
+		<article class="row-3 blog__post-preview">
 			<header>
-				<h3 class="blog__post__heading">
-					<a href="/posts/{{ $post->slug }}" class="blog__post__heading__link">{{ $post->title }}</a>
+				<h3 class="blog__post-preview__heading">
+					<a href="/posts/{{ $post->slug }}" class="blog__post-preview__heading__link">{{ $post->title }}</a>
 				</h3>
-				<hr class="blog__post__header-separator">
-				<p class="blog__post__date">
+				<hr class="blog__post-preview__header-separator">
+				<p class="blog__post-preview__date">
 					{{ \Carbon\Carbon::instance($post->created_at)->toFormattedDateString() }}
 				</p>
 			</header>
-			<main class="blog__post__body">
+			<main class="blog__post-preview__body">
 				{{ str_limit($post->body, 300, '...') }}
 			</main>
-			<footer class="blog__post__footer">
-				<a href="/posts/{{ $post->slug }}" class="blog__post__footer__link">Read this blog entry</a>
+			<footer class="blog__post-preview__footer">
+				<a href="/posts/{{ $post->slug }}" class="blog__post-preview__footer__link">Read this blog entry</a>
 			</footer>
 		</article>
 		@endforeach
