@@ -87,13 +87,14 @@ Home - Void Graphics
 				</p>
 			</header>
 			<main class="blog__post__body">
-				{{ $post->body }}
+				{{ str_limit($post->body, 300, '...') }}
 			</main>
 			<footer class="blog__post__footer">
 				<a href="/posts/{{ $post->slug }}" class="blog__post__footer__link">Read this blog entry</a>
 			</footer>
 		</article>
 		@endforeach
+
 		<a href="#" class="btn">
 			<span class="btn__text">View more blog posts</span>
 			<span class="btn__bg"></span>
