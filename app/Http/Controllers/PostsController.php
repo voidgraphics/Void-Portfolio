@@ -66,8 +66,8 @@ class PostsController extends Controller
     public function show($slug)
     {
         $post = Post::where('slug', $slug)->firstOrFail();
-        $moreWorks = Work::orderByRaw('RAND()')->take(3)->get();
-        $morePosts = Post::where('slug', '!=', $post->slug)->orderByRaw('RAND()')->take(3)->get();
+        $moreWorks = Work::orderByRaw('RAND()')->take(2)->get();
+        $morePosts = Post::where('slug', '!=', $post->slug)->orderByRaw('RAND()')->take(2)->get();
         return view('posts.show', compact("post", "moreWorks", "morePosts"));
     }
 
