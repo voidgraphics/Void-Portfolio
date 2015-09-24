@@ -16,9 +16,9 @@ Home - Void Graphics
 		<div class="header__logo--text">Void graphics</div>
 		<p class="welcome">
 			<span class="welcome__greeting">Hello!</span>
-			<p class="welcome__about">
+			<span class="welcome__about">
 				I'm a Belgian graphics design student specialised in creating beautiful, efficient and fun applications for smartphones, desktop and the web.
-			</p>
+			</span>
 		</p>
 		<a href="" class="contact-btn"><span class="contact-btn__text">Contact me</span><span class="contact-btn__bg"></span></a>
 		<button class="scrolldown-btn"></button>
@@ -52,19 +52,19 @@ Home - Void Graphics
 	<h2 class="section__heading">Some of my latest work</h2>
 	<div class="wrap">
 		@foreach($works as $work)
-			<article class="row-3 recent-works__work">
-				<div class="recent-works__work__thumb-container">
-					<a href="/works/{{ $work->slug }}" class="recent-works__work__link">
-						<img src="{{ asset( $work->thumbnail_path ) }}" class="recent-works__work__thumbnail" alt="" width="100%"/>
+			<article class="row-3 work-preview">
+				<div class="work-preview__thumb-container">
+					<a href="/works/{{ $work->slug }}" class="work-preview__link">
+						<img src="{{ asset( $work->thumbnail_path ) }}" class="work-preview__thumbnail" alt="" width="100%"/>
 					</a>
 				</div>
-				<h3 class="recent-works__work__heading">
-					<a href="/works/{{ $work->slug }}" class="recent-works__work__link">{{ $work->title }}</a>
+				<h3 class="work-preview__heading">
+					<a href="/works/{{ $work->slug }}" class="work-preview__link">{{ $work->title }}</a>
 				</h3>
 				<hr>
-				<p class="recent-works__work__date">
+				<time class="work-preview__date">
 					{{ \Carbon\Carbon::instance($work->created_at)->toFormattedDateString() }}
-				</p>
+				</time>
 			</article>
 		@endforeach
 		<a href="#" class="btn">
@@ -83,13 +83,15 @@ Home - Void Graphics
 					<a href="/posts/{{ $post->slug }}" class="post__heading__link">{{ $post->title }}</a>
 				</h3>
 				<hr>
-				<p class="post__date">
+				<time class="post__date">
 					{{ \Carbon\Carbon::instance($post->created_at)->toFormattedDateString() }}
-				</p>
+				</time>
 			</header>
-			<main class="post__body">
-				{{ str_limit($post->body, 300, '...') }}
-			</main>
+			<div class="post__body">
+				<p>
+					{{ str_limit($post->body, 300, '...') }}
+				</p>
+			</div>
 			<footer class="post__footer">
 				<a href="/posts/{{ $post->slug }}" class="post__footer__link">Read this blog entry</a>
 			</footer>
