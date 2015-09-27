@@ -18,6 +18,10 @@ Work: {{ $work->title }} - Void Graphics
 		<main class="post__content">
 			<div class="wrap">
 				<div class="content__container">
+					<a href="{{ route( 'home' ) }}" class="home-btn">
+						<svg version="1.1" id="Calque_2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="36px" height="36px" viewBox="0 0 36 36" enable-background="new 0 0 36 36" xml:space="preserve"><g id="arrow"><line fill="none" stroke="#2E2E2E" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" x1="11.5" y1="18.031" x2="26.5" y2="18.031"/><line fill="none" stroke="#2E2E2E" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" x1="11.5" y1="18.031" x2="17.062" y2="12.469"/><line fill="none" stroke="#2E2E2E" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" x1="17.062" y1="23.594" x2="11.5" y2="18.031"/></g><circle id="circle" fill="none" stroke="#EC6759" stroke-width="2" stroke-miterlimit="10" cx="18.062" cy="18.031" r="16.562"/>
+						</svg>
+					</a>
 					<h2 class="post__title">{{ $work->title }}</h2>
 					<p class="post__category">{{ $work->category }}</p>
 					<time class="post__date">{{ \Carbon\Carbon::instance($work->created_at)->toFormattedDateString() }}</time>

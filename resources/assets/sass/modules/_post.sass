@@ -2,10 +2,33 @@
 	background-color: #fff
 	padding: 0 0 150px
 
+@keyframes homebtn
+	0%
+		stroke-dashoffset: 104.06211678323668px
+
+	50%
+		stroke-dasharray: 50px 70px
+
+	100%
+		stroke-dashoffset: 0
+
+.home-btn
+	position: absolute
+	top: 95px
+	transition: all .3s ease
+
+	circle
+		stroke-dasharray: 104.06211678323668px
+
+	&:hover
+		circle
+			animation: homebtn .6s ease
+
 .post__title
 	font-size: 55px
 	color: $darkGray
-	margin: 80px auto
+	padding: 80px 0
+	margin: 0 auto
 	text-align: center
 	width: 60%
 	transition: all .3s ease
@@ -96,6 +119,11 @@
 		transition: width .3s ease
 
 @media (max-width: 700px)
+	.home-btn
+		top: 15px
+		left: 15px
+		transition: all .3s ease
+
 	.post__title
 		width: 100%
 		font-size: 35px
