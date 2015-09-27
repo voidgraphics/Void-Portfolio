@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Request;
 use App\Work;
+use App\Post;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
@@ -68,7 +69,9 @@ class WorksController extends Controller
     public function show($slug)
     {
         $work = Work::where('slug', $slug)->firstOrFail();
-        return view('works.show')->with('work', $work);
+        $morePosts = Post::orderByRaw('RAND()')->take(3)->get();
+        $moreWorks = Work::where('slug', '!=', $work->slug)->orderByRaw('RAND()')->take(3)->get();
+        return view('works.show', compact("work", "moreWorks", "morePosts"));
     }
 
     /**
