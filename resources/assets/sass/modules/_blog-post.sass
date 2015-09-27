@@ -10,6 +10,7 @@
 	margin: 80px auto
 	text-align: center
 	width: 60%
+	transition: all .3s ease
 
 .post__date
 	font-family: "Montserrat"
@@ -28,6 +29,7 @@
 	display: block
 	font-size: 15px
 	-moz-osx-font-smoothing: grayscale
+	transition: width .3s ease
 
 	a
 		color: $red
@@ -78,9 +80,24 @@
 	text-align: center
 	margin-bottom: 35px
 
+@media (max-width: 1300px)
+	.post__content
+		width: 70%
+		transition: width .3s ease
+
+@media (max-width: 1080px)
+	.post__content
+		width: 90%
+		transition: width .3s ease
+
 @media (max-width: 700px)
 	.post__title
 		width: 100%
+		font-size: 35px
+		transition: all .3s ease
 
 	.post__content
 		width: 100%
+
+		code
+			font-size: 13px
