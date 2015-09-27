@@ -206,14 +206,15 @@ ul {
 
 .post {
   background-color: #fff;
-  padding: 30px 0 150px; }
+  padding: 0 0 150px; }
 
 .post__title {
   font-size: 55px;
   color: #2e2e2e;
   margin: 80px auto;
   text-align: center;
-  width: 60%; }
+  width: 60%;
+  transition: all 0.3s ease; }
 
 .post__date {
   font-family: "Montserrat";
@@ -231,7 +232,8 @@ ul {
   margin: 0 auto;
   display: block;
   font-size: 15px;
-  -moz-osx-font-smoothing: grayscale; }
+  -moz-osx-font-smoothing: grayscale;
+  transition: width 0.3s ease; }
   .post__content a {
     color: #ec6759; }
   .post__content p {
@@ -255,9 +257,12 @@ ul {
     .post__content ol li {
       counter-increment: step-counter; }
     .post__content ol li:before {
-      content: counter(step-counter); }
+      content: counter(step-counter);
+      font-size: 13px; }
   .post__content img {
     max-width: 100%; }
+  .post__content code {
+    font-size: 12px; }
 
 .viewmore {
   width: 30%;
@@ -272,11 +277,25 @@ ul {
   text-align: center;
   margin-bottom: 35px; }
 
+@media (max-width: 1300px) {
+  .post__content {
+    width: 70%;
+    transition: width 0.3s ease; } }
+
+@media (max-width: 1080px) {
+  .post__content {
+    width: 90%;
+    transition: width 0.3s ease; } }
+
 @media (max-width: 700px) {
   .post__title {
-    width: 100%; }
+    width: 100%;
+    font-size: 35px;
+    transition: all 0.3s ease; }
   .post__content {
-    width: 100%; } }
+    width: 100%; }
+    .post__content code {
+      font-size: 13px; } }
 
 .blog__post-preview .post__heading {
   font-size: 13px;
