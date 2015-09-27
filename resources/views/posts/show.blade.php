@@ -19,9 +19,7 @@ Blog: {{ $post->title }} - Void Graphics
 		</header>
 		<main class="post__content">
 			<time class="post__date">{{ \Carbon\Carbon::instance($post->created_at)->toFormattedDateString() }}</time>
-			<p class="post__paragraph">
-				{!! Markdown::defaultTransform($post->body) !!}
-			</p>
+			{!! Markdown::defaultTransform($post->body) !!}
 		</main>
 	</article>
 </div>
