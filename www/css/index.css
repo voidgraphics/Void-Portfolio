@@ -311,7 +311,8 @@ ul {
   transition: all 0.4s ease; }
 
 .blog {
-  text-align: center; }
+  text-align: center;
+  background-color: #fff; }
 
 .blog__post-preview:nth-child(2) {
   margin: 0 55px;
@@ -331,7 +332,8 @@ ul {
   font-family: "Montserrat";
   text-align: center;
   display: block;
-  margin-top: 10px; }
+  margin-top: 10px;
+  color: #ec6759; }
 
 .blog__post-preview .post__header-separator {
   border: 1px solid #ec6759;
