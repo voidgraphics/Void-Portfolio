@@ -1,13 +1,18 @@
 .hero
 	height: 400px
-	width: 100%
 	position: relative
+	width: 100%
+	transition: height .3s ease
 
 .hero__bg
 	position: fixed
-	top: 0
+	top: 0%
+	left: 50%
+	transform: translateX( -50% )
 	z-index: -2
-	width: 100%
+	overflow: hidden
+	min-width: 100%
+	transition: height .3s ease
 
 .hero__content
 	display: inline-block
@@ -33,3 +38,8 @@
 	font-family: "Montserrat"
 	margin-top: 20px
 	margin-bottom: 15px
+
+@media (max-width: 700px)
+	.hero, .hero__bg
+		height: 250px
+		transition: height .3s ease
