@@ -163,3 +163,8 @@ Home - Void Graphics
 	<a href="http://www.intothevoid.space" class="intothevoid__link">www.intothevoid.space</a>
 </section>
 @stop
+
+@section("scripts")
+	<script type="text/javascript" src="{{ asset( '/js/jquery.js' ) }}"></script>
+	<script type="text/javascript" src="{{ asset( '/js/viewmore.js' ) }}"></script>
+@stop
