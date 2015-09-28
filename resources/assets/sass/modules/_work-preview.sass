@@ -12,6 +12,10 @@
 			font-size: 11px
 			font-family: "Montserrat"
 
+	&.appear
+		display: inline-block !important
+		animation: fadeIn 1s ease
+
 .work-preview__thumb-container
 	border-radius: 6px
 	overflow: hidden
@@ -34,8 +38,6 @@
 	color: #fff
 	text-transform: uppercase
 
-
-
 @media (max-width:1300px)
 	.work-preview:nth-child(2)
 		margin: 0 30px
@@ -46,11 +48,14 @@
 		margin: 50px 0
 
 @media (max-width: 700px)
-	.work-preview:nth-child(2)
-		margin-bottom: 0
+	.btn
+		margin-top: 0
 
 	.work-preview:nth-child(3)
 		display: none
+
+	.work-preview:last-of-type
+		margin-bottom: 50px
 
 	.work-preview__thumbnail
 		width: 100%

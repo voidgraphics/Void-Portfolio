@@ -53,7 +53,7 @@ Work: {{ $work->title }} - Void Graphics
 				</time>
 			</article>
 		@endforeach
-		<a href="#" class="btn">
+		<a href="#" class="btn" id="viewmore-works">
 			<span class="btn__text">View more design</span>
 			<span class="btn__bg"></span>
 		</a>
@@ -83,10 +83,14 @@ Work: {{ $work->title }} - Void Graphics
 			</footer>
 		</article>
 		@endforeach
-		<a href="#" class="btn">
+		<a href="#" class="btn" id="viewmore-posts">
 			<span class="btn__text">View more blog posts</span>
 			<span class="btn__bg"></span>
 		</a>
 	</div>
 </section>
+@stop
+
+@section( "scripts" )
+	<script type="text/javascript" src="{{ asset('/js/viewmore.js') }}"></script>
 @stop

@@ -1,5 +1,9 @@
 .blog__post-preview
 
+	&.appear
+		display: inline-block !important
+		animation: fadeIn 1s ease
+
 	.post__heading
 		font-size: 13px
 		text-align: center
@@ -55,12 +59,19 @@
 	.blog__post-preview
 		display: none
 
+		&:nth-child( 2n )
+			margin: 50px 0
+
 		&:first-child
 			display: block
 
 		.post__body
 			width: 70%
 			margin: 25px auto 0
+
+@media (max-width: 700px)
+	.blog .btn
+		margin-top: 50px
 
 @media (max-width: 600px)
 	.blog__post-preview
