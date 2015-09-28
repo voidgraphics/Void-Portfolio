@@ -1,5 +1,6 @@
 .work-preview
 	text-align: center
+	margin-bottom: 50px
 
 	&.whitebg
 		.work-preview__heading
@@ -39,13 +40,13 @@
 	text-transform: uppercase
 
 @media (max-width:1300px)
-	.work-preview:nth-child(2)
-		margin: 0 30px
+	.work-preview:nth-child( 3n + 2 )
+		margin: 0 30px 50px
 		transition: margin .3s ease
 
 @media (max-width: 1080px)
-	.work-preview:nth-child(2)
-		margin: 50px 0
+	.work-preview:nth-child( 3n + 2 )
+		margin: 0 0 50px
 
 @media (max-width: 700px)
 	.btn

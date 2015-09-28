@@ -3,6 +3,10 @@
 	background-color: #fff
 
 .blog__post-preview
-	&:nth-child( 2 )
-		margin: 0 55px
+	&:nth-child( 3n + 2 )
+		margin: 0 55px 50px
 		transition: margin .3s ease
+
+@media (max-width: 1080px)
+	.blog .blog__post-preview:nth-child( 3n + 2 )
+		margin: 0 0 50px
