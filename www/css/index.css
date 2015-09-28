@@ -231,6 +231,8 @@ ul {
 .work-preview {
   text-align: center;
   margin-bottom: 50px; }
+  .work-preview:last-of-type {
+    margin-right: 0; }
   .work-preview.whitebg .work-preview__heading {
     color: #2e2e2e;
     font-weight: 900; }
@@ -346,6 +348,8 @@ ul {
 
 .blog__post-preview {
   margin-bottom: 50px; }
+  .blog__post-preview:last-of-type {
+    margin-right: 0; }
   .blog__post-preview.appear {
     display: inline-block !important;
     -webkit-animation: fadeIn 1s ease;
