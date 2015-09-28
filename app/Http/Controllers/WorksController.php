@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Request;
+use Response;
+use Validator;
 use App\Work;
 use App\Post;
 use App\Http\Requests;
@@ -69,9 +71,21 @@ class WorksController extends Controller
     public function show($slug)
     {
         $work = Work::where('slug', $slug)->firstOrFail();
-        $morePosts = Post::orderByRaw('RAND()')->take(3)->get();
-        $moreWorks = Work::where('slug', '!=', $work->slug)->orderByRaw('RAND()')->take(3)->get();
+        $morePosts = Post::take(3)->orderBy("created_at", "desc")->get();
+        $moreWorks = Work::where('slug', '!=', $work->slug)->take(3)->orderBy("created_at", "desc")->get();
         return view('works.show', compact("work", "moreWorks", "morePosts"));
+    }
+
+    public function getMore($excludes)
+    {
+        $excludes = explode("SEPARATOR", $excludes);
+        $whereString = "";
+        foreach( $excludes as $exclude ){
+            $whereString = $whereString . "slug != ? AND ";
+        }
+        $whereString = substr($whereString, 0, -5);
+        $works = Work::whereRaw($whereString, $excludes)->take(3)->orderBy("created_at", "desc")->get();
+        return view("works.ajax")->with("works", $works);
     }
 
     /**
