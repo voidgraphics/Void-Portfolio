@@ -26,7 +26,6 @@
 				var style = window.getComputedStyle(node);
 				if( style.display === "none" ){
 					node.classList.add( "appear" );
-					console.log( node.nodeName );
 				}
 			}
 		} );
