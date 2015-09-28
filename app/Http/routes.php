@@ -17,6 +17,7 @@ Route::group(['middleware' => 'auth'], function () {
 	Route::resource('works', 'WorksController', ['except' => ['index', 'show']]);
 	Route::resource('posts', 'PostsController', ['except' => ['index', 'show']]);
 });
+Route::get('works/getmore/{excludes}', 'WorksController@getMore');
 Route::resource('works', 'WorksController', ['only' => ['index', 'show']]);
 Route::resource('posts', 'PostsController', ['only' => ['index', 'show']]);
 
