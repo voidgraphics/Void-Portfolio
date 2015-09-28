@@ -53,6 +53,7 @@ Home - Void Graphics
 	<div class="wrap">
 		@foreach($works as $work)
 			<article class="row-3 work-preview">
+				<div class="hidden works-slug">{{ $work->slug }}</div>
 				<div class="work-preview__thumb-container">
 					<a href="/works/{{ $work->slug }}" class="work-preview__link">
 						<img src="{{ asset( $work->thumbnail_path ) }}" class="work-preview__thumbnail" alt="" width="100%"/>
@@ -67,10 +68,12 @@ Home - Void Graphics
 				</time>
 			</article>
 		@endforeach
-		<a href="#" class="btn">
-			<span class="btn__text">View more design</span>
-			<span class="btn__bg"></span>
-		</a>
+		<div class="btn-container">
+			<a href="#" class="btn" id="viewmore-work">
+				<span class="btn__text">View more design</span>
+				<span class="btn__bg"></span>
+			</a>
+		</div>
 	</div>
 </section>
 <section class="blog section">
@@ -95,13 +98,15 @@ Home - Void Graphics
 			<footer class="post__footer">
 				<a href="/posts/{{ $post->slug }}" class="post__footer__link">Read this blog entry</a>
 			</footer>
+			<div class="hidden posts-slug">{{ $post->slug }}</div>
 		</article>
 		@endforeach
-
-		<a href="#" class="btn">
-			<span class="btn__text">View more blog posts</span>
-			<span class="btn__bg"></span>
-		</a>
+		<div class="btn-container">
+			<a href="#" class="btn" id="viewmore-post">
+				<span class="btn__text">View more blog posts</span>
+				<span class="btn__bg"></span>
+			</a>
+		</div>
 	</div>
 </section>
 <section class="contact section">
