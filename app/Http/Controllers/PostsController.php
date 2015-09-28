@@ -71,6 +71,18 @@ class PostsController extends Controller
         return view('posts.show', compact("post", "moreWorks", "morePosts"));
     }
 
+    public function getMore($excludes)
+    {
+        $excludes = explode("SEPARATOR", $excludes);
+        $whereString = "";
+        foreach( $excludes as $exclude ){
+            $whereString = $whereString . "slug != ? AND ";
+        }
+        $whereString = substr($whereString, 0, -5);
+        $posts = Post::whereRaw($whereString, $excludes)->take(3)->orderBy("created_at", "desc")->get();
+        return view("posts.ajax")->with("posts", $posts);
+    }
+
     /**
      * Show the form for editing the specified resource.
      *
