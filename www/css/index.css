@@ -125,7 +125,8 @@ ul {
   max-width: 430px;
   margin: 0 auto;
   line-height: 1.5;
-  margin-bottom: 60px; }
+  margin-bottom: 60px;
+  margin-top: 10px; }
 
 .contact-btn {
   color: #f0f0f1;
@@ -222,11 +223,12 @@ ul {
   margin: 0 55px 50px;
   transition: margin 0.3s ease; }
 
-.recent-works .btn .btn__text {
-  color: #fff; }
-
-.recent-works .btn .btn__bg {
-  background-color: #465256; }
+.recent-works .btn {
+  margin-top: 0; }
+  .recent-works .btn .btn__text {
+    color: #fff; }
+  .recent-works .btn .btn__bg {
+    background-color: #465256; }
 
 .work-preview {
   text-align: center;
@@ -414,7 +416,7 @@ ul {
 
 @media (max-width: 1300px) {
   .blog__post-preview:nth-child(3n + 2) {
-    margin: 0 30px;
+    margin: 0 30px 50px;
     transition: margin 0.3s ease; } }
 
 @media (max-width: 1080px) {

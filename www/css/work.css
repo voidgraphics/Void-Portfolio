@@ -186,11 +186,12 @@ ul {
   margin: 0 55px 50px;
   transition: margin 0.3s ease; }
 
-.recent-works .btn .btn__text {
-  color: #fff; }
-
-.recent-works .btn .btn__bg {
-  background-color: #465256; }
+.recent-works .btn {
+  margin-top: 0; }
+  .recent-works .btn .btn__text {
+    color: #fff; }
+  .recent-works .btn .btn__bg {
+    background-color: #465256; }
 
 .blog__post-preview {
   margin-bottom: 50px; }
@@ -260,7 +261,7 @@ ul {
 
 @media (max-width: 1300px) {
   .blog__post-preview:nth-child(3n + 2) {
-    margin: 0 30px;
+    margin: 0 30px 50px;
     transition: margin 0.3s ease; } }
 
 @media (max-width: 1080px) {
