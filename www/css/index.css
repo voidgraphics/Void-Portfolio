@@ -476,6 +476,18 @@ ul {
   margin: 0 55px;
   transition: margin 0.3s ease; }
 
+.form-error {
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-family: "Montserrat"; }
+  .form-error .error-parenthesis {
+    color: #ec6759;
+    margin: 0 5px; }
+
+.field-error {
+  border-color: #ec6759 !important; }
+
 label {
   display: block;
   text-align: left;

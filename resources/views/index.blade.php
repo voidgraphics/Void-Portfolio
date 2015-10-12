@@ -119,15 +119,28 @@ Home - Void Graphics
 				You can send me an e-mail at <a href="mailto:contact@void.graphics">contact@void.graphics</a> using your favourite e-mail client, or you can simply use this convenient form to do exactly the same thing. Up to you!
 			</p>
 		</div>
-		<form class="row-3 contact__form" action="index.html" method="post">
-			<div>
-				<label for="subject">Subject</label>
-				<input type="text" name="subject">
-				<label for="email">Your e-mail</label>
-				<input type="email" name="email">
-				<label for="message">Message</label>
-				<textarea name="message" rows="8" cols="40"></textarea>
-				<button type="submit" name="send" value="send" class="btn">
+		<form class="row-3 contact__form" action="/contact" method="post">
+			<div class="fields">
+				{!! csrf_field() !!}
+				<label for="subject">Subject
+				@if($errors->has('subject'))
+					<span class="form-error"><span class="error-parenthesis">(</span>{{ $errors->first('subject') }}<span class="error-parenthesis">)</span></span>
+				@endif
+				</label>
+				<input type="text" name="subject" id="subject" value="{{ Input::old('subject') }}" {!! $errors->has('subject') ? 'class="field-error"' : '' !!}>
+				<label for="email">Your e-mail
+				@if($errors->has('email'))
+					<span class="form-error"><span class="error-parenthesis">(</span>{{ $errors->first('email') }}<span class="error-parenthesis">)</span></span>
+				@endif
+				</label>
+				<input type="email" name="email" id="email" value="{{ Input::old('email') }}" {!! $errors->has('email') ? 'class="field-error"' : '' !!}>
+				<label for="message">Message
+				@if($errors->has('message'))
+					<span class="form-error"><span class="error-parenthesis">(</span>{{ $errors->first('message') }}<span class="error-parenthesis">)</span></span>
+				@endif
+				</label>
+				<textarea name="message" rows="8" cols="40" id="message" {!! $errors->has('message') ? 'class="field-error"' : '' !!}>{{ Input::old('message') }}</textarea>
+				<button type="submit" class="btn">
 					<span class="btn__text">Send message</span>
 					<span class="btn__bg"></span>
 				</button>
@@ -166,6 +179,6 @@ Home - Void Graphics
 
 @section("scripts")
 	<script type="text/javascript" src="{{ asset( '/js/jquery.js' ) }}"></script>
-	<script type="text/javascript" src="{{ asset( '/js/scroll.js' ) }}"></script>
+	<script type="text/javascript" src="{{ asset( '/js/index.js' ) }}"></script>
 	<script type="text/javascript" src="{{ asset( '/js/viewmore.js' ) }}"></script>
 @stop

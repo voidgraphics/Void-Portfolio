@@ -12,6 +12,7 @@
 */
 
 Route::get('/', [ 'as' => 'home', 'uses' => 'PagesController@index' ]);
+Route::post('/contact', 'PagesController@contact');
 Route::group(['middleware' => 'auth'], function () {
 	Route::get('/admin', [ 'as' => 'admin', 'uses' => 'AdminController@index' ]);
 	Route::resource('works', 'WorksController', ['except' => ['index', 'show']]);
