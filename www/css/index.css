@@ -104,7 +104,7 @@ ul {
   display: inline-block;
   position: relative;
   text-transform: uppercase;
-  font-weight: 900;
+  font-weight: 700;
   font-family: "Montserrat";
   letter-spacing: 4px;
   margin-bottom: 50px; }
@@ -123,7 +123,7 @@ ul {
 
 .welcome__greeting {
   text-transform: uppercase;
-  font-weight: 900;
+  font-weight: 700;
   letter-spacing: 1px;
   font-size: 14px; }
 
@@ -390,14 +390,14 @@ ul {
     text-align: left; }
     .blog__post-preview .post__body em {
       font-style: italic;
-      font-weight: 900; }
+      font-weight: 700; }
   .blog__post-preview .post__footer {
     padding-top: 15px;
     text-align: center; }
   .blog__post-preview .post__footer__link {
     font-size: 11px;
     font-family: "Montserrat";
-    font-weight: 900;
+    font-weight: 700;
     text-transform: uppercase;
     text-decoration: none;
     color: #000;
