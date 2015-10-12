@@ -26,9 +26,8 @@ Work: {{ $work->title }} - Void Graphics
 					<p class="post__category">{{ $work->category }}</p>
 					<time class="post__date">{{ \Carbon\Carbon::instance($work->created_at)->toFormattedDateString() }}</time>
 					<div class="hidden works-slug">{{ $work->slug }}</div>
-					<p class="post__body">
-						{!! Markdown::defaultTransform($work->desc) !!}
-					</p>
+					{!! Markdown::defaultTransform($work->desc) !!}
+				</div>
 				<div class="share">
 					<a class="share-btn f-share" href="http://www.facebook.com/share.php?u={{ Request::url() }}&title={{ $work->title }}">
 						<i class="fa fa-facebook"></i>
