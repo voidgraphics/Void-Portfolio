@@ -24,6 +24,20 @@ Blog: {{ $post->title }} - Void Graphics
 		<main class="post__content">
 			<time class="post__date">{{ \Carbon\Carbon::instance($post->created_at)->toFormattedDateString() }}</time>
 			{!! Markdown::defaultTransform($post->body) !!}
+			<div class="share">
+				<a class="share-btn f-share" href="http://www.facebook.com/share.php?u={{ Request::url() }}&title={{ $post->title }}">
+					<i class="fa fa-facebook"></i>
+					<i class="fa fa-facebook"></i>
+				</a>
+				<a class="share-btn t-share" href="http://twitter.com/home?status={{ $post->title }}+{{ Request::url() }}">
+					<i class="fa my-fa-twitter"></i>
+					<i class="fa my-fa-twitter"></i>
+				</a>
+				<a class="share-btn lkdin-share" href="http://www.linkedin.com/shareArticle?mini=true&url={{ Request::url() }}&title={{ $post->title }}&source=<?= $_SERVER['HTTP_HOST']; ?>">
+					<i class="fa my-fa-linkedin"></i>
+					<i class="fa my-fa-linkedin"></i>
+				</a>
+			</div>
 		</main>
 	</article>
 </div>

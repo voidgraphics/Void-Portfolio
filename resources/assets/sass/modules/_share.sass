@@ -1,0 +1,57 @@
+.share
+    text-align: center
+    padding-top: 40px
+
+
+.share-btn
+    display: inline-block
+    width: 40px
+    height: 40px
+    margin: 0 5px
+    background-color: #eee
+    border-radius: 6px
+    color: #fff !important
+    text-transform: uppercase
+    text-decoration: none
+    letter-spacing: .4px
+    color: #fff
+    transition: box-shadow .3s ease
+    overflow: hidden
+    position: relative
+
+    i
+        position: absolute
+        left: 50%
+        color: #fff !important
+        transform: translateX( -50% )
+        transition: all .3s ease
+
+    i:first-child
+        font-size: 16px
+        top: 50%
+        left: 50%
+        transform: translateY( -50% ) translateX( -50% )
+        vertical-align: top
+
+    i:last-child
+        top: -50%
+
+    &:hover
+        i:first-child
+            top: 150%
+            transition: all .3s ease
+
+        i:last-child
+            top: 50%
+            left: 50%
+            transform: translateY( -50% ) translateX( -50% )
+            transition: all .3s ease
+
+.f-share
+    background-color: #3B5998
+
+.t-share
+    background-color: #4099FF
+
+.lkdin-share
+    background-color: #0077B5
