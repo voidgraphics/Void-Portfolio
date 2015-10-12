@@ -70,7 +70,7 @@ Home - Void Graphics
 		@endforeach
 		<div class="btn-container">
 			<a href="#" class="btn" id="viewmore-work">
-				<span class="btn__text">View more design</span>
+				<span class="btn__text">View more works</span>
 				<span class="btn__bg"></span>
 			</a>
 		</div>
