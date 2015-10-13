@@ -3,6 +3,7 @@
     "use strict";
 
     var button,
+        contactButton,
         form,
         errors,
         contactFormButton;
@@ -43,9 +44,9 @@
 
 	}
 
-    var scrollDown = function(){
+    var scrollDown = function( sSelector ){
 
-	    var rect = document.querySelector( ".about.section" ).getBoundingClientRect();
+	    var rect = document.querySelector( sSelector ).getBoundingClientRect();
 		var scrollTarget = rect.top + window.pageYOffset;
 
         scrollTo( scrollTarget, 600, easing.easeInOutQuad );
@@ -99,8 +100,16 @@
     form = document.querySelector( ".contact__form" );
     contactFormButton = document.querySelector( ".contact__form button" );
 
+    contactFormButton = [].slice.call( document.querySelectorAll( ".contact-scroll" ) );
+    contactFormButton.forEach( function( element ){
+        element.addEventListener( "click", function(){
+            scrollDown( ".contact.section" );
+        } );
+    } );
 
-    button.addEventListener( "click", scrollDown );
+    button.addEventListener( "click", function(){
+        scrollDown( ".about.section" );
+    } );
     contactFormButton.addEventListener( "click", checkFormData );
 
 } )();

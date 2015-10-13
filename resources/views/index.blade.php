@@ -20,7 +20,7 @@ Home - Void Graphics
 				I'm a Belgian graphics design student specialised in creating beautiful, efficient and fun applications for smartphones, desktop and the web.
 			</span>
 		</p>
-		<a href="" class="contact-btn"><span class="contact-btn__text">Contact me</span><span class="contact-btn__bg"></span></a>
+		<button class="contact-btn contact-scroll"><span class="contact-btn__text contact-scroll">Contact me</span><span class="contact-btn__bg contact-scroll"></span></button>
 		<button class="scrolldown-btn"></button>
 	</div>
 </header>
