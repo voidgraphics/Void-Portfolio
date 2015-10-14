@@ -10,7 +10,7 @@
 			<a href="/works/{{ $moreWork->slug }}" class="work-preview__link">{{ $moreWork->title }}</a>
 		</h3>
 		<hr>
-		<time class="work-preview__date">
+		<time class="work-preview__date" datetime="{{ $moreWork->created_at }}">
 			{{ \Carbon\Carbon::instance($moreWork->created_at)->toFormattedDateString() }}
 		</time>
 	</article>

@@ -5,7 +5,7 @@
 			<a href="/posts/{{ $morePost->slug }}" class="post__heading__link">{{ $morePost->title }}</a>
 		</h3>
 		<hr>
-		<time class="post__date">
+		<time class="post__date" datetime="{{ $morePost->created_at }}">
 			{{ \Carbon\Carbon::instance($morePost->created_at)->toFormattedDateString() }}
 		</time>
 	</header>
