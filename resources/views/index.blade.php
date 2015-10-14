@@ -31,7 +31,7 @@ Home - Void Graphics
 			<h3 class="about__info__heading">Adrien Leloup, 21, Belgian, student.</h3>
 			<p class="about__info__text">
 				I am an ambitious 21 year-old from Belgium.
-	I have a deep passion for crafting experiences for people through technology - be it websites or mobile &amp; desktop apps. My journey started by creating custom themes for Windows: modifying resource images in system files to give the user’s computer a brand new look &amp; feel. I quickly fell in love with this concept, which led me to start studies in this field.
+	I have a deep passion for crafting experiences for people through technology&nbsp;-&nbsp;be it websites or mobile &amp; desktop apps. My journey started by creating custom themes for Windows: modifying resource images in system files to give the user’s computer a brand new look &amp; feel. I quickly fell in love with this concept, which led me to start studies in this field.
 			</p>
 		</div>
 		<div class="row-3 about__picture">
@@ -41,9 +41,8 @@ Home - Void Graphics
 			<h3 class="about__info__heading">My skills</h3>
 			<p class="about__info__text">
 				I am skilled in both front &amp; back end development for the web.
-	My front end skills include HTML, CSS, JavaScript, and the use of front-oriented frameworks such as Jade, SASS &amp; Compass, and CoffeeScript.
-	My back end skills include PHP, node.js and Ruby, including a few frameworks such as Laravel and Rails.
-	I also do iOS and OS X development using Swift.
+	My front end skills include HTML, CSS, JavaScript, and the use of front-oriented technologies such as Jade, SASS &amp; Compass and Gulp.
+	My back end skills include PHP and node.js, my favourite PHP framework being Laravel. I am currently learning Ruby on Rails, and iOS and OS X development using Swift.
 			</p>
 		</div>
 	</div>
