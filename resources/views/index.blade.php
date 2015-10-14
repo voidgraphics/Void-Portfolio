@@ -62,7 +62,7 @@ Home - Void Graphics
 					<a href="/works/{{ $work->slug }}" class="work-preview__link">{{ $work->title }}</a>
 				</h3>
 				<hr>
-				<time class="work-preview__date">
+				<time class="work-preview__date" datetime="{{ $work->created_at }}">
 					{{ \Carbon\Carbon::instance($work->created_at)->toFormattedDateString() }}
 				</time>
 			</article>
@@ -85,7 +85,7 @@ Home - Void Graphics
 					<a href="/posts/{{ $post->slug }}" class="post__heading__link">{{ $post->title }}</a>
 				</h3>
 				<hr>
-				<time class="post__date">
+				<time class="post__date" datetime="{{ $post->created_at }}">
 					{{ \Carbon\Carbon::instance($post->created_at)->toFormattedDateString() }}
 				</time>
 			</header>
