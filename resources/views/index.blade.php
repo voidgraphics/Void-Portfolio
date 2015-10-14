@@ -55,7 +55,7 @@ Home - Void Graphics
 				<div class="hidden works-slug">{{ $work->slug }}</div>
 				<div class="work-preview__thumb-container">
 					<a href="/works/{{ $work->slug }}" class="work-preview__link">
-						<img src="{{ asset( $work->thumbnail_path ) }}" class="work-preview__thumbnail" alt="" width="100%"/>
+						<img src="{{ asset( $work->thumbnail_path ) }}" class="work-preview__thumbnail" alt="" width="360" height="240"/>
 					</a>
 				</div>
 				<h3 class="work-preview__heading">
