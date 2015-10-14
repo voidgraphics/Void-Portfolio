@@ -100,8 +100,8 @@
     form = document.querySelector( ".contact__form" );
     contactFormButton = document.querySelector( ".contact__form button" );
 
-    contactFormButton = [].slice.call( document.querySelectorAll( ".contact-scroll" ) );
-    contactFormButton.forEach( function( element ){
+    contactButton = [].slice.call( document.querySelectorAll( ".contact-scroll" ) );
+    contactButton.forEach( function( element ){
         element.addEventListener( "click", function(){
             scrollDown( ".contact.section" );
         } );
