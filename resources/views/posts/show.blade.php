@@ -21,24 +21,24 @@ Blog: {{ $post->title }} - Void Graphics
 		<header class="post__header">
 			<h2 class="post__title">{{ $post->title }}</h2>
 		</header>
-		<main class="post__content">
-			<time class="post__date">{{ \Carbon\Carbon::instance($post->created_at)->toFormattedDateString() }}</time>
+		<div class="post__content">
+			<time class="post__date" datetime="{{ $post->created_at }}">{{ \Carbon\Carbon::instance($post->created_at)->toFormattedDateString() }}</time>
 			{!! Markdown::defaultTransform($post->body) !!}
 			<div class="share">
-				<a class="share-btn f-share" href="http://www.facebook.com/share.php?u={{ Request::url() }}&title={{ $post->title }}">
+				<a class="share-btn f-share" href="http://www.facebook.com/share.php?u={{ Request::url() }}&amp;title={{ urlencode($post->title) }}">
 					<i class="fa fa-facebook"></i>
 					<i class="fa fa-facebook"></i>
 				</a>
-				<a class="share-btn t-share" href="http://twitter.com/home?status={{ $post->title }}+{{ Request::url() }}">
+				<a class="share-btn t-share" href="http://twitter.com/home?status={{ urlencode($post->title) }}+{{ Request::url() }}">
 					<i class="fa my-fa-twitter"></i>
 					<i class="fa my-fa-twitter"></i>
 				</a>
-				<a class="share-btn lkdin-share" href="http://www.linkedin.com/shareArticle?mini=true&url={{ Request::url() }}&title={{ $post->title }}&source=<?= $_SERVER['HTTP_HOST']; ?>">
+				<a class="share-btn lkdin-share" href="http://www.linkedin.com/shareArticle?mini=true&amp;url={{ Request::url() }}&amp;title={{ urlencode($post->title) }}&amp;source=<?= $_SERVER['HTTP_HOST']; ?>">
 					<i class="fa my-fa-linkedin"></i>
 					<i class="fa my-fa-linkedin"></i>
 				</a>
 			</div>
-		</main>
+		</div>
 	</article>
 </div>
 <section class="recent-works section">
@@ -49,7 +49,7 @@ Blog: {{ $post->title }} - Void Graphics
 				<div class="hidden works-slug">{{ $moreWork->slug }}</div>
 				<div class="work-preview__thumb-container">
 					<a href="/works/{{ $moreWork->slug }}" class="work-preview__link">
-						<img src="{{ asset( $moreWork->thumbnail_path ) }}" class="work-preview__thumbnail" alt="" width="100%"/>
+						<img src="{{ asset( $moreWork->thumbnail_path ) }}" class="work-preview__thumbnail" alt="" width="360" height="240"/>
 					</a>
 				</div>
 				<h3 class="work-preview__heading">
@@ -63,7 +63,7 @@ Blog: {{ $post->title }} - Void Graphics
 		@endforeach
 		<div class="btn-container">
 			<a href="#" class="btn" id="viewmore-work">
-				<span class="btn__text">View more design</span>
+				<span class="btn__text">View more works</span>
 				<span class="btn__bg"></span>
 			</a>
 		</div>

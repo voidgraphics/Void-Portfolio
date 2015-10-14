@@ -11,41 +11,40 @@ Work: {{ $work->title }} - Void Graphics
 @section('content')
 <?php use \Michelf\Markdown; ?>
 <h1 class="title--hidden">{{ $work->title }}</h1>
-	<article class="post">
-		<header class="hero">
-			<img src="{{ asset( $work->img_path ) }}" alt="{{ $work->title }}" class="hero__bg"/>
-		</header>
-		<main class="post__content">
-			<div class="wrap">
-				<div class="content__container">
-					<a href="{{ route( 'home' ) }}" class="home-btn">
-						<svg version="1.1" id="Calque_2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="36px" height="36px" viewBox="0 0 36 36" enable-background="new 0 0 36 36" xml:space="preserve"><g id="arrow"><line fill="none" stroke="#2E2E2E" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" x1="11.5" y1="18.031" x2="26.5" y2="18.031"/><line fill="none" stroke="#2E2E2E" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" x1="11.5" y1="18.031" x2="17.062" y2="12.469"/><line fill="none" stroke="#2E2E2E" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" x1="17.062" y1="23.594" x2="11.5" y2="18.031"/></g><circle id="circle" fill="none" stroke="#EC6759" stroke-width="2" stroke-miterlimit="10" cx="18.062" cy="18.031" r="16.562"/>
-						</svg>
-					</a>
-					<h2 class="post__title">{{ $work->title }}</h2>
-					<p class="post__category">{{ $work->category }}</p>
-					<time class="post__date">{{ \Carbon\Carbon::instance($work->created_at)->toFormattedDateString() }}</time>
-					<div class="hidden works-slug">{{ $work->slug }}</div>
-					{!! Markdown::defaultTransform($work->desc) !!}
-				</div>
-				<div class="share">
-					<a class="share-btn f-share" href="http://www.facebook.com/share.php?u={{ Request::url() }}&title={{ $work->title }}">
-						<i class="fa fa-facebook"></i>
-						<i class="fa fa-facebook"></i>
-					</a>
-					<a class="share-btn t-share" href="http://twitter.com/home?status={{ $work->title }}+{{ Request::url() }}">
-						<i class="fa my-fa-twitter"></i>
-						<i class="fa my-fa-twitter"></i>
-					</a>
-					<a class="share-btn lkdin-share" href="http://www.linkedin.com/shareArticle?mini=true&url={{ Request::url() }}&title={{ $work->title }}&source=<?= $_SERVER['HTTP_HOST']; ?>">
-						<i class="fa my-fa-linkedin"></i>
-						<i class="fa my-fa-linkedin"></i>
-					</a>
-				</div>
+<article class="post">
+	<header class="hero">
+		<img src="{{ asset( $work->img_path ) }}" alt="{{ $work->title }}" class="hero__bg"/>
+	</header>
+	<div class="post__content">
+		<div class="wrap">
+			<div class="content__container">
+				<a href="{{ route( 'home' ) }}" class="home-btn">
+					<svg version="1.1" id="Calque_2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="36px" height="36px" viewBox="0 0 36 36" enable-background="new 0 0 36 36" xml:space="preserve"><g id="arrow"><line fill="none" stroke="#2E2E2E" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" x1="11.5" y1="18.031" x2="26.5" y2="18.031"/><line fill="none" stroke="#2E2E2E" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" x1="11.5" y1="18.031" x2="17.062" y2="12.469"/><line fill="none" stroke="#2E2E2E" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" x1="17.062" y1="23.594" x2="11.5" y2="18.031"/></g><circle id="circle" fill="none" stroke="#EC6759" stroke-width="2" stroke-miterlimit="10" cx="18.062" cy="18.031" r="16.562"/>
+					</svg>
+				</a>
+				<h2 class="post__title">{{ $work->title }}</h2>
+				<p class="post__category">{{ $work->category }}</p>
+				<time class="post__date" datetime="{{ $work->created_at }}">{{ \Carbon\Carbon::instance($work->created_at)->toFormattedDateString() }}</time>
+				<div class="hidden works-slug">{{ $work->slug }}</div>
+				{!! Markdown::defaultTransform($work->desc) !!}
 			</div>
-		</main>
-	</article>
-</div>
+			<div class="share">
+				<a class="share-btn f-share" href="http://www.facebook.com/share.php?u={{ Request::url() }}&amp;title={{ urlencode($work->title) }}">
+					<i class="fa fa-facebook"></i>
+					<i class="fa fa-facebook"></i>
+				</a>
+				<a class="share-btn t-share" href="http://twitter.com/home?status={{ urlencode($work->title) }}+{{ Request::url() }}">
+					<i class="fa my-fa-twitter"></i>
+					<i class="fa my-fa-twitter"></i>
+				</a>
+				<a class="share-btn lkdin-share" href="http://www.linkedin.com/shareArticle?mini=true&amp;url={{ Request::url() }}&amp;title={{ urlencode($work->title) }}&amp;source=<?= $_SERVER['HTTP_HOST']; ?>">
+					<i class="fa my-fa-linkedin"></i>
+					<i class="fa my-fa-linkedin"></i>
+				</a>
+			</div>
+		</div>
+	</div>
+</article>
 
 
 <section class="recent-works section">
@@ -56,7 +55,7 @@ Work: {{ $work->title }} - Void Graphics
 				<div class="hidden works-slug">{{ $moreWork->slug }}</div>
 				<div class="work-preview__thumb-container">
 					<a href="/works/{{ $moreWork->slug }}" class="work-preview__link">
-						<img src="{{ asset( $moreWork->thumbnail_path ) }}" class="work-preview__thumbnail" alt="" width="100%"/>
+						<img src="{{ asset( $moreWork->thumbnail_path ) }}" class="work-preview__thumbnail" alt="" width="360" height="240"/>
 					</a>
 				</div>
 				<h3 class="work-preview__heading">
@@ -70,7 +69,7 @@ Work: {{ $work->title }} - Void Graphics
 		@endforeach
 		<div class="btn-container">
 			<a href="#" class="btn" id="viewmore-work">
-				<span class="btn__text">View more design</span>
+				<span class="btn__text">View more works</span>
 				<span class="btn__bg"></span>
 			</a>
 		</div>
