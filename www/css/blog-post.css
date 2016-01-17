@@ -359,6 +359,12 @@ ul {
   .blog__post-preview .post__heading {
     font-size: 13px;
     text-align: center; }
+    .blog__post-preview .post__heading::after {
+      content: "";
+      display: block;
+      margin: 12px auto 5px;
+      border: 1px solid #ec6759;
+      width: 100px; }
   .blog__post-preview .post__heading__link {
     color: inherit;
     text-decoration: none; }
@@ -464,6 +470,12 @@ ul {
   font-size: 13px;
   font-weight: 400;
   color: #fff; }
+  .work-preview__heading::after {
+    content: "";
+    display: block;
+    margin: 12px auto 5px;
+    border: 1px solid #ec6759;
+    width: 100px; }
 
 .work-preview__link {
   color: inherit;
