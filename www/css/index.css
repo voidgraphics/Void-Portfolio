@@ -97,7 +97,10 @@ ul {
 
 .header__logo--image {
   display: block;
-  margin: 0 auto 40px; }
+  margin: 0 auto 40px;
+  background: url("../img/logo.svg");
+  width: 110px;
+  height: 71px; }
 
 .header__logo--text {
   font-size: 14px;
