@@ -9,7 +9,7 @@ Work: {{ $work->title }} - Void Graphics
 @stop
 
 @section('content')
-<?php use \Michelf\Markdown; ?>
+<?php use \Michelf\MarkdownExtra; ?>
 <h1 class="title--hidden">{{ $work->title }}</h1>
 <article class="post">
 	<header class="hero">
@@ -26,7 +26,7 @@ Work: {{ $work->title }} - Void Graphics
 				<p class="post__category">{{ $work->category }}</p>
 				<time class="post__date" datetime="{{ $work->created_at }}">{{ \Carbon\Carbon::instance($work->created_at)->toFormattedDateString() }}</time>
 				<div class="hidden works-slug">{{ $work->slug }}</div>
-				{!! Markdown::defaultTransform($work->desc) !!}
+				{!! MarkdownExtra::defaultTransform($work->desc) !!}
 			</div>
 			<div class="share">
 				<a class="share-btn f-share" href="http://www.facebook.com/share.php?u={{ Request::url() }}&amp;title={{ urlencode($work->title) }}">

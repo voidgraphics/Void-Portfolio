@@ -10,7 +10,7 @@ Blog: {{ $post->title }} - Void Graphics
 @stop
 
 @section('content')
-<?php use \Michelf\Markdown; ?>
+<?php use \Michelf\MarkdownExtra; ?>
 <h1 class="title--hidden">Blog: {{ $post->title }}</h1>
 <div class="wrap">
 	<a href="{{ route( 'home' ) }}" class="home-btn">
@@ -23,7 +23,7 @@ Blog: {{ $post->title }} - Void Graphics
 		</header>
 		<div class="post__content">
 			<time class="post__date" datetime="{{ $post->created_at }}">{{ \Carbon\Carbon::instance($post->created_at)->toFormattedDateString() }}</time>
-			{!! Markdown::defaultTransform($post->body) !!}
+			{!! MarkdownExtra::defaultTransform($post->body) !!}
 			<div class="share">
 				<a class="share-btn f-share" href="http://www.facebook.com/share.php?u={{ Request::url() }}&amp;title={{ urlencode($post->title) }}">
 					<i class="fa fa-facebook"></i>

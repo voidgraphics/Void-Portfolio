@@ -136,6 +136,13 @@ ul {
   background-color: #fff;
   transition: all 0.4s ease; }
 
+.download-btn {
+  display: block;
+  text-align: center;
+  width: 120px;
+  margin: 30px auto 0;
+  color: #fff !important; }
+
 .hero {
   height: 400px;
   position: relative;
