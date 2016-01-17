@@ -12,7 +12,7 @@ Home - Void Graphics
 <h1 class="title--hidden">Homepage</h1>
 <header class="header">
 	<div class="header__content">
-		<img src="{{ asset( '/img/logo.svg' ) }}" alt="Void Graphics Logo" class="header__logo--image">
+		<div src="{{ asset( '/img/logo.svg' ) }}" class="header__logo--image"></div>
 		<div class="header__logo--text">Void graphics</div>
 		<p class="welcome">
 			<span class="welcome__greeting">Hello!</span>
