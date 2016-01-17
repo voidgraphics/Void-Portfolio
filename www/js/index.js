@@ -102,12 +102,14 @@
 
     contactButton = [].slice.call( document.querySelectorAll( ".contact-scroll" ) );
     contactButton.forEach( function( element ){
-        element.addEventListener( "click", function(){
+        element.addEventListener( "click", function( e ){
+            e.preventDefault();
             scrollDown( ".contact.section" );
         } );
     } );
 
-    button.addEventListener( "click", function(){
+    button.addEventListener( "click", function( e ){
+        e.preventDefault();
         scrollDown( ".about.section" );
     } );
     contactFormButton.addEventListener( "click", checkFormData );

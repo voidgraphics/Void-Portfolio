@@ -20,11 +20,11 @@ Home - Void Graphics
 				I'm a Belgian graphics design student specialised in creating beautiful, efficient and fun applications for smartphones, desktop and the web.
 			</span>
 		</p>
-		<button class="contact-btn contact-scroll"><span class="contact-btn__text contact-scroll">Contact me</span><span class="contact-btn__bg contact-scroll"></span></button>
-		<button class="scrolldown-btn"></button>
+		<a href="#contact" class="contact-btn contact-scroll"><span class="contact-btn__text contact-scroll">Contact me</span><span class="contact-btn__bg contact-scroll"></span></a>
+		<a href="#about" class="scrolldown-btn"></a>
 	</div>
 </header>
-<section class="about section">
+<section class="about section" id="about">
 	<div class="wrap">
 		<h2 class="section__heading about__heading">A few words about me</h2>
 		<div class="row-3 about__info">
@@ -108,7 +108,7 @@ Home - Void Graphics
 		</div>
 	</div>
 </section>
-<section class="contact section">
+<section class="contact section" id="contact">
 	<h2 class="section__heading">Here's an easy way to contact me</h2>
 	<div class="wrap">
 		<div class="row-3 contact__info">
