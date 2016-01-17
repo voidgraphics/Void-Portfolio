@@ -51,7 +51,7 @@ Work: {{ $work->title }} - Void Graphics
 	<h2 class="section__heading">Here's more works</h2>
 	<div class="wrap">
 		@foreach($moreWorks as $moreWork)
-			<article class="row-3 work-preview">
+			<article class="row-3 work-preview retrievable" data-slug="{{ $moreWork->slug }}">
 				<div class="hidden works-slug">{{ $moreWork->slug }}</div>
 				<div class="work-preview__thumb-container">
 					<a href="/works/{{ $moreWork->slug }}" class="work-preview__link">
@@ -78,7 +78,7 @@ Work: {{ $work->title }} - Void Graphics
 	<h2 class="section__heading">And a few blog posts</h2>
 	<div class="wrap">
 		@foreach($morePosts as $morePost)
-		<article class="row-3 blog__post-preview">
+		<article class="row-3 blog__post-preview retrievable" data-slug="{{ $morePost->slug }}">
 			<header>
 				<h3 class="post__heading">
 					<a href="/posts/{{ $morePost->slug }}" class="post__heading__link">{{ $morePost->title }}</a>

@@ -17,12 +17,11 @@
 	}
 
 	var retrieveMore = function( type ){
-		var x = [].slice.call(document.querySelectorAll( "." + type + "-slug" ));
+		var x = [].slice.call(document.querySelectorAll( ".retrievable" ));
 		var excludes = [];
 		x.forEach( function( excludeElement ){
-			excludes.push( excludeElement.innerHTML );
+			excludes.push( excludeElement.dataset.slug );
 		} );
-		console.log(excludes);
 		var excludesString = excludes.join("SEPARATOR");
 		var url = '/' + type + "/getmore/" + excludesString;
 		$.ajax( {

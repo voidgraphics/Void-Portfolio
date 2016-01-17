@@ -51,8 +51,7 @@ Home - Void Graphics
 	<h2 class="section__heading">Some of my latest work</h2>
 	<div class="wrap">
 		@foreach($works as $work)
-			<article class="row-3 work-preview">
-				<div class="hidden works-slug">{{ $work->slug }}</div>
+			<article class="row-3 work-preview retrievable" data-slug="{{ $work->slug }}" data-lol="lol">
 				<div class="work-preview__thumb-container">
 					<a href="/works/{{ $work->slug }}" class="work-preview__link">
 						<img src="{{ asset( $work->thumbnail_path ) }}" class="work-preview__thumbnail" alt="" width="360" height="240"/>
@@ -78,7 +77,7 @@ Home - Void Graphics
 	<h2 class="section__heading">Sometimes I also write blog posts</h2>
 	<div class="wrap">
 		@foreach($posts as $post)
-		<article class="row-3 blog__post-preview">
+		<article class="row-3 blog__post-preview retrievable" data-slug="{{ $post->slug }}">
 			<header>
 				<h3 class="post__heading">
 					<a href="/posts/{{ $post->slug }}" class="post__heading__link">{{ $post->title }}</a>
@@ -95,7 +94,7 @@ Home - Void Graphics
 			<footer class="post__footer">
 				<a href="/posts/{{ $post->slug }}" class="post__footer__link">Read this blog entry</a>
 			</footer>
-			<div class="hidden posts-slug">{{ $post->slug }}</div>
+			{{-- <div class="hidden posts-slug">{{ $post->slug }}</div> --}}
 		</article>
 		@endforeach
 		<div class="btn-container">
